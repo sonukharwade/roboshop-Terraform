@@ -7,3 +7,11 @@ resource "aws_instance" "Frontend" {
     Name = "Frontend"
   }
 }
+
+resource "aws_route53_record" "Frontend" {
+zone_id = "Z09275246XOL4TQU5EUC"
+name = "frontend-dev" # Replace with your domain name
+type = "A"
+ttl = 10
+records = [aws_instance.Frontend.private_ip] # Replace with your desired IP address
+}
