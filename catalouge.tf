@@ -15,5 +15,5 @@ zone_id = "Z09275246XOL4TQU5EUC"
 name = "frontend-dev" # Replace with your domain name
 type = "A"
 ttl = 10
-records = ["aws_instance.catalouge.private_ip"] # Replace with your desired IP address
+records = [aws_instance.catalouge.private_ip] # Replace with your desired IP address
 }
